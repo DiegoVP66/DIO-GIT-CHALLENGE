@@ -1,9 +1,9 @@
 .challenge-table-container {
-    padding: 30px;
+    padding: 20px;
     font-size: 19px;
-    width: 100%;
+    width: 92%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
 }
 .challenge-table-container h4 span{
   margin-left: 20px;
@@ -33,7 +33,6 @@
     padding-left: 20px;
     font-size: 0.8em;
     letter-spacing: -0.015em;
-    
   }
   
   .challenge-table tbody tr:hover > td {

@@ -1,0 +1,22 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.about-img{
+    background-color: var(--dark-color);
+    width: 200px;
+}
+
+.about-img img { 
+    width: 200px;
+}
+
+@media(min-width:568px){
+    .about-container {
+        flex-direction: row;
+    }
+}

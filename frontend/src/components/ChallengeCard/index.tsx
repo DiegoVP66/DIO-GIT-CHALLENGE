@@ -2,7 +2,7 @@ import "./styles.css";
 
 const ChallengeCard = () => {
   return (
-    <div className="container challenge-table-container base-card">
+    <div className="challenge-table-container base-card">
       <h4 className="mt-4">
         TQI Bootcamp <span>125hrs</span>
       </h4>
