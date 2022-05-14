@@ -1,8 +1,12 @@
+import "./styles.css";
+
 const Navbar = () => {
   return (
-    <div>
-      <h1>Navbar</h1>
-    </div>
+    <nav className="navbar navbar-expand-md navbar-dark bg-primary">
+      <div className="container-fluid">
+        <h4>Git Challenge</h4>
+      </div>
+    </nav>
   );
 };
 
