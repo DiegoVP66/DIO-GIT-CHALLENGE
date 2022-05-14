@@ -1,0 +1,41 @@
+.main-nav img{
+    width: 100px;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.main-menu li a {
+    color: var(--secondary-color);
+}
+
+.main-menu li a:hover{
+    background: linear-gradient(to right,var(--left-effect-color) ,var(--rigth-effect-color) );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+.effects h3{
+      background: linear-gradient(to right,var(--left-effect-color) ,var(--rigth-effect-color) );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+
+@media(min-width: 768px){
+    .main-nav img{
+        margin-right: 80px;
+    }
+
+    .menu-container{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .main-menu {
+     width: 300px;
+    }
+}
