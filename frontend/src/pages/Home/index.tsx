@@ -2,6 +2,7 @@ import Rocket from "assets/img/rocket.svg";
 
 import "./styles.css";
 import Challenge from "components/Challenge";
+import About from "components/About";
 
 const Home = () => {
   return (
@@ -23,6 +24,9 @@ const Home = () => {
         </div>
       </div>
       <hr />
+      <div>
+        <About />
+      </div>
     </div>
   );
 };
