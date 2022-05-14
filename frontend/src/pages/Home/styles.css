@@ -1,0 +1,29 @@
+.home-container {
+    padding: 5px;
+}
+.home-content {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-top: 1px solid var(--dark-color);
+    border-right: 1px solid var(--dark-color);
+    max-width: 800px;  
+}
+
+.home-content-container {
+    display: flex;
+    justify-content: center;
+}
+
+.home-img-container {
+    display: none;
+}
+
+@media(min-width: 576px) {
+    .home-img-container {
+        display: unset;
+        margin-top: 50px;
+    }
+    .home-img-container img {
+        width: 100%;
+    }
+}

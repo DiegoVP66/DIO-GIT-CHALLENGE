@@ -1,0 +1,53 @@
+.challenge-table-container {
+    padding: 30px;
+    font-size: 19px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.challenge-table-container h4 span{
+  margin-left: 20px;
+}
+.challenge-table {
+    margin-top: 10px;
+    border-spacing: 0;
+    width: 80%;
+  }
+  
+  .challenge-table thead th {
+    font-size: 0.9em;
+  }
+  
+  .challenge-table thead th:first-of-type {
+    padding-left: 20px;
+  }
+  .challenge-table thead th {
+    padding-left: 20px;
+  }
+  .challenge-table tbody td:first-of-type {
+    padding-left: 20px;
+  }
+  
+  .challenge-table tbody td {
+    border-top: 1px solid var(--light-color);
+    padding-left: 20px;
+    font-size: 0.8em;
+    letter-spacing: -0.015em;
+    
+  }
+  
+  .challenge-table tbody tr:hover > td {
+    background-color: var(--light-color);
+  }
+  
+  .challenge-table tbody tr:nth-child(even) {
+    background-color: var(--primary-color);
+  }
+  
+  .challenge-table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .challenge-table tbody td span {
+    color: var(--language-color);
+  }

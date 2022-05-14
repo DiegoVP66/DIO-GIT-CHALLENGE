@@ -19,6 +19,7 @@ body {
     --light-color: #94949434;
     --left-effect-color:rgb(0, 247, 255);
     --rigth-effect-color:rgb(181, 73, 190);
+    --language-color:rgb(218, 214, 36);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -26,7 +27,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .base-card{
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 a{
