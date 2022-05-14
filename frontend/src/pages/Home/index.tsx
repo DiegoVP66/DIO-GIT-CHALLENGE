@@ -1,7 +1,7 @@
-import Challenge from "components/Challenge";
 import Rocket from "assets/img/rocket.svg";
 
 import "./styles.css";
+import Challenge from "components/Challenge";
 
 const Home = () => {
   return (
@@ -22,6 +22,7 @@ const Home = () => {
           <img src={Rocket} alt="" />
         </div>
       </div>
+      <hr />
     </div>
   );
 };
