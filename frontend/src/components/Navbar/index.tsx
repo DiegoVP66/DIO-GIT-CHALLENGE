@@ -4,7 +4,7 @@ import "./styles.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
       <div className="container main-nav effects">
         <img
           src="https://hermes.digitalinnovation.one/assets/diome/logo.svg"
@@ -34,16 +34,7 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="#challenge">Challenge</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#progress">Progress</a>
-            </li>
-            <li>
-              <a href="#login">Login</a>
+              <NavLink to="/admin/auth">Login</NavLink>
             </li>
           </ul>
         </div>

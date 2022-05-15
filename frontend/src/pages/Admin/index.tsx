@@ -1,7 +1,9 @@
+import Auth from "./Auth";
+
 const Admin = () => {
   return (
-    <div>
-      <h1>Admin</h1>
+    <div className="admin-container">
+      <Auth />
     </div>
   );
 };
