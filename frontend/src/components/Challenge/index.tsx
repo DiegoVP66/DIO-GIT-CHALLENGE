@@ -4,7 +4,11 @@ import Pagination from "components/Pagination";
 const Challenge = () => {
   return (
     <div>
-      <ChallengeCard />
+      <ChallengeCard
+        course="Introduction to programming and computational thinking"
+        instructor="Juliana Mascarenhas"
+        hours={5}
+      />
       <div>
         <div className="row pagination-container">
           <Pagination pageCount={3} range={3} />

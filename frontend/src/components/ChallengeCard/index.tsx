@@ -1,6 +1,12 @@
 import "./styles.css";
 
-const ChallengeCard = () => {
+type Props = {
+  course: string;
+  instructor: string;
+  hours: number;
+};
+
+const ChallengeCard = ({ course, instructor, hours }: Props) => {
   return (
     <div className="challenge-table-container base-card">
       <h4 className="mt-4">
@@ -16,21 +22,9 @@ const ChallengeCard = () => {
         </thead>
         <tbody>
           <tr>
-            <td>Introduction to programming and computational thinking</td>
-            <td>Juliana Mascarenhas</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>Introduction to Git and GitHub</td>
-            <td>Otávio Reis</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>
-              Working with Collections <span>(JAVA)</span>{" "}
-            </td>
-            <td>Camila Cavalcante</td>
-            <td>6</td>
+            <td>{course}</td>
+            <td>{instructor}</td>
+            <td>{hours}</td>
           </tr>
         </tbody>
       </table>
