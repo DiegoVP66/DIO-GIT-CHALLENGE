@@ -1,4 +1,4 @@
-package com.diegoTQIBootcamp.TQI;
+package com.diegoTQIBootcamp.TQI.controllers;
 
 import java.net.URI;
 
