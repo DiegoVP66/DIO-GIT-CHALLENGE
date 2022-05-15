@@ -5,6 +5,8 @@ import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.diegoTQIBootcamp.TQI.dto.CourseDTO;
 import com.diegoTQIBootcamp.TQI.entities.Course;
 import com.diegoTQIBootcamp.TQI.repositories.CourseRepository;
+import com.diegoTQIBootcamp.TQI.services.exceptions.DataBaseException;
 import com.diegoTQIBootcamp.TQI.services.exceptions.ResourceNotFoundException;
 
 @Service
@@ -52,7 +55,17 @@ public class CourseService {
 			throw new ResourceNotFoundException("Entity not found");
 		}
 	}
-	
+
+	public void delete(Long id) {
+		try {
+			repository.deleteById(id);
+		} catch (EmptyResultDataAccessException e) {
+			throw new ResourceNotFoundException("Id not Found " + id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DataBaseException("Integrity violation!");
+		}
+	}
+
 	private void copyDTOToEntity(Course entity, CourseDTO dto) {
 		entity.setCourseName(dto.getCourseName());
 		entity.setInstructorName(dto.getInstructorName());
