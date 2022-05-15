@@ -24,6 +24,21 @@
       -webkit-text-fill-color: transparent;
   }
 
+  .btn-login-container a{
+      color: var(--secondary-color);
+  }
+
+  .logout-container a {
+      color: var(--rigth-effect-color);
+  }
+
+  .crud-panel{
+      margin-left: 5px;
+  }
+
+  .crud-panel a {
+      color: var(--left-effect-color);
+  }
 
 @media(min-width: 768px){
     .main-nav img{

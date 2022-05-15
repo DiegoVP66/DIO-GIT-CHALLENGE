@@ -1,8 +1,38 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { removeAuthData } from "util/storage";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "AuthContextData";
+import { getTokenData } from "util/token";
+import { isAuthenticated } from "util/auth";
 import "bootstrap/js/src/collapse.js";
 import "./styles.css";
 
 const Navbar = () => {
+  const history = useNavigate();
+
+  const { authContextData, setAuthContextData } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (isAuthenticated()) {
+      setAuthContextData({
+        authenticated: true,
+        tokenData: getTokenData(),
+      });
+    } else {
+      setAuthContextData({
+        authenticated: false,
+      });
+    }
+  }, [setAuthContextData]);
+
+  const handleLogoutClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    removeAuthData();
+    setAuthContextData({
+      authenticated: false,
+    });
+    history("/");
+  };
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
       <div className="container main-nav effects">
@@ -33,10 +63,27 @@ const Navbar = () => {
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
-              <NavLink to="/admin/auth">Login</NavLink>
-            </li>
           </ul>
+          <div className="btn-login-container">
+            {authContextData.authenticated ? (
+              <div className="logout-container">
+                <a href="#logout" onClick={handleLogoutClick}>
+                  LOGOUT
+                </a>
+              </div>
+            ) : (
+              <NavLink to="/admin/auth">LOGIN</NavLink>
+            )}
+          </div>
+          <div className="crud-panel">
+            {authContextData.authenticated ? (
+              <>
+                <NavLink to="/admin/users">ADM</NavLink>
+              </>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
       </div>
     </nav>

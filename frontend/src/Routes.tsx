@@ -11,7 +11,7 @@ const RoutesComponent = () => (
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/admin/auth" element={<Auth />} />
+          <Route path="/admin/auth/" element={<Auth />} />
         </Routes>
       </div>
       <Footer />

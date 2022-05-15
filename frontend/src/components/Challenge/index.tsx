@@ -58,7 +58,7 @@ const Challenge = () => {
         </thead>
         <tbody>
           {page?.content.map((item) => (
-            <tr>
+            <tr key={item.id}>
               <td>{item.courseName}</td>
               <td>{item.instructorName}</td>
               <td>{item.hours}</td>
