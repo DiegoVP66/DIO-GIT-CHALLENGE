@@ -37,9 +37,7 @@ public class CourseService {
 	@Transactional
 	public CourseDTO insert(CourseDTO dto) {
 		Course entity = new Course();
-		entity.setCourseName(dto.getCourseName());
-		entity.setInstructorName(dto.getInstructorName());
-		entity.setHours(dto.getHours());
+		copyDTOToEntity(entity, dto);
 		entity = repository.save(entity);
 		return new CourseDTO(entity);
 	}
@@ -48,12 +46,16 @@ public class CourseService {
 	public CourseDTO update(Long id, CourseDTO dto) {
 		try {
 			Course entity = repository.getById(id);
-			entity.setCourseName(dto.getCourseName());
-			entity.setInstructorName(dto.getInstructorName());
-			entity.setHours(dto.getHours());
+			copyDTOToEntity(entity, dto);
 			return new CourseDTO(entity);
 		} catch (EntityNotFoundException e) {
 			throw new ResourceNotFoundException("Entity not found");
 		}
+	}
+	
+	private void copyDTOToEntity(Course entity, CourseDTO dto) {
+		entity.setCourseName(dto.getCourseName());
+		entity.setInstructorName(dto.getInstructorName());
+		entity.setHours(dto.getHours());
 	}
 }
