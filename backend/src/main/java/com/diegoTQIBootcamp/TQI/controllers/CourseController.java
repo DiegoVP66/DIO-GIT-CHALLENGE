@@ -1,6 +1,7 @@
 package com.diegoTQIBootcamp.TQI.controllers;
 
 import java.net.URI;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -30,6 +31,12 @@ public class CourseController {
 	public ResponseEntity<Page<CourseDTO>> findAllPaged(Pageable pageable) {
 		Page<CourseDTO> page = service.findAllPaged(pageable);
 		return ResponseEntity.ok().body(page);
+	}
+
+	@GetMapping(value = "/list")
+	public ResponseEntity<List<CourseDTO>> findAll() {
+		List<CourseDTO> list = service.findALL();
+		return ResponseEntity.ok().body(list);
 	}
 
 	@GetMapping(value = "/{id}")

@@ -1,6 +1,8 @@
 package com.diegoTQIBootcamp.TQI.services;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -28,6 +30,12 @@ public class CourseService {
 	public Page<CourseDTO> findAllPaged(Pageable pageable) {
 		Page<Course> page = repository.findAll(pageable);
 		return page.map(x -> new CourseDTO(x));
+	}
+
+	@Transactional(readOnly = true)
+	public List<CourseDTO> findALL() {
+		List<Course> list = repository.findAll();
+		return list.stream().map(x -> new CourseDTO(x)).collect(Collectors.toList());
 	}
 
 	@Transactional(readOnly = true)
@@ -70,5 +78,6 @@ public class CourseService {
 		entity.setCourseName(dto.getCourseName());
 		entity.setInstructorName(dto.getInstructorName());
 		entity.setHours(dto.getHours());
+		entity.setPercent(dto.getPercent());
 	}
 }

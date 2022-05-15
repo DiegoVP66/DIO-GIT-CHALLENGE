@@ -3,4 +3,5 @@ export type Courses = {
   courseName: string;
   instructorName: string;
   hours: number;
+  percent: number;
 };

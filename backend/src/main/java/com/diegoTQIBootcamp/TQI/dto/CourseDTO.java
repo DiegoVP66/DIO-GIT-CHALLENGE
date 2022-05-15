@@ -11,15 +11,17 @@ public class CourseDTO implements Serializable {
 	private String courseName;
 	private String instructorName;
 	private Double hours;
+	private Double percent;
 
 	public CourseDTO() {
 	}
 
-	public CourseDTO(Long id, String courseName, String instructorName, Double hours) {
+	public CourseDTO(Long id, String courseName, String instructorName, Double hours, Double percent) {
 		this.id = id;
 		this.courseName = courseName;
 		this.instructorName = instructorName;
 		this.hours = hours;
+		this.percent = percent;
 	}
 
 	public CourseDTO(Course entity) {
@@ -27,6 +29,7 @@ public class CourseDTO implements Serializable {
 		courseName = entity.getCourseName();
 		instructorName = entity.getInstructorName();
 		hours = entity.getHours();
+		percent = entity.getPercent();
 	}
 
 	public Long getId() {
@@ -59,6 +62,14 @@ public class CourseDTO implements Serializable {
 
 	public void setHours(Double hours) {
 		this.hours = hours;
+	}
+
+	public Double getPercent() {
+		return percent;
+	}
+
+	public void setPercent(Double percent) {
+		this.percent = percent;
 	}
 
 }
