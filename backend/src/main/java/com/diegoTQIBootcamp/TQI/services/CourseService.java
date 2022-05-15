@@ -30,4 +30,14 @@ public class CourseService {
 		Course entity = obj.orElse(null);
 		return new CourseDTO(entity);
 	}
+
+	@Transactional
+	public CourseDTO insert(CourseDTO dto) {
+		Course entity = new Course();
+		entity.setCourseName(dto.getCourseName());
+		entity.setInstructorName(dto.getInstructorName());
+		entity.setHours(dto.getHours());
+		entity = repository.save(entity);
+		return new CourseDTO(entity);
+	}
 }
