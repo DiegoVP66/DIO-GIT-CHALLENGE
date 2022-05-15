@@ -1,5 +1,7 @@
 package com.diegoTQIBootcamp.TQI.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,5 +22,12 @@ public class CourseService {
 	public Page<CourseDTO> findAllPaged(Pageable pageable) {
 		Page<Course> page = repository.findAll(pageable);
 		return page.map(x -> new CourseDTO(x));
+	}
+
+	@Transactional(readOnly = true)
+	public CourseDTO findById(Long id) {
+		Optional<Course> obj = repository.findById(id);
+		Course entity = obj.orElse(null);
+		return new CourseDTO(entity);
 	}
 }
