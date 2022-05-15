@@ -30,7 +30,7 @@ const Home = () => {
       </div>
       <hr />
       <div className="home-progress-container">
-        <h1 id="progress">Progress</h1>
+        <h1 id="progress">Completed so far</h1>
         <Progress />
       </div>
     </div>
