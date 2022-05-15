@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "bootstrap/js/src/collapse.js";
 import "./styles.css";
 
@@ -30,13 +31,16 @@ const Navbar = () => {
         >
           <ul className="navbar-nav main-menu">
             <li>
-              <a href="#home">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               <a href="#challenge">Challenge</a>
             </li>
             <li>
               <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#progress">Progress</a>
             </li>
             <li>
               <a href="#login">Login</a>

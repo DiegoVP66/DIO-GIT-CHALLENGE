@@ -1,8 +1,10 @@
 import Rocket from "assets/img/rocket.svg";
 import Challenge from "components/Challenge";
 import About from "components/About";
+import Progress from "components/Progress";
 
 import "./styles.css";
+
 const Home = () => {
   return (
     <div className="home-container" id="home">
@@ -27,6 +29,10 @@ const Home = () => {
         </div>
       </div>
       <hr />
+      <div className="home-progress-container">
+        <h1 id="progress">Progress</h1>
+        <Progress />
+      </div>
     </div>
   );
 };

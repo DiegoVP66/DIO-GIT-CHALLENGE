@@ -27,6 +27,10 @@
     max-width: 750px;
 }
 
+.home-progress-container {
+    padding: 20px;
+}
+
 @media(min-width: 576px) {
     .home-img-container {
         display: unset;
