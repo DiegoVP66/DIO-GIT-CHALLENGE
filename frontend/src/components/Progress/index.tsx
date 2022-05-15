@@ -45,7 +45,7 @@ const Progress = () => {
         options={{ ...options, xaxis: chartData.labels }}
         series={chartData.series}
         width="100%"
-        height="185px"
+        height="125px"
         type="bar"
       />
     </div>

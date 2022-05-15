@@ -11,7 +11,7 @@ export const options = {
       borderRadius: 6,
     },
     dataLabels: {
-      show: true,
+      show: false,
       textAnchor: "start",
     },
     colors: {
