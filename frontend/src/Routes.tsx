@@ -5,8 +5,10 @@ import Auth from "pages/Admin/Auth";
 import CourseCRUDForm from "pages/Admin/CRUD/CRUDForm";
 
 import Home from "pages/Home";
+import {} from "react-router-dom";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { isAuthenticated } from "util/auth";
 
 const RoutesComponent = () => (
   <BrowserRouter>
@@ -16,9 +18,34 @@ const RoutesComponent = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/admin/auth/" element={<Auth />} />
-          <Route path="/admin/courses" element={<Admin />} />
-          <Route path="/admin/courses/create" element={<CourseCRUDForm />} />
-          <Route path="/admin/courses/:courseId" element={<CourseCRUDForm />} />
+
+          {isAuthenticated() ? (
+            <Route path="/admin/courses" element={<Admin />} />
+          ) : (
+            <Route
+              path="/admin/courses"
+              element={<Navigate to="/admin/auth" />}
+            />
+          )}
+          {isAuthenticated() ? (
+            <Route path="/admin/courses/create" element={<CourseCRUDForm />} />
+          ) : (
+            <Route
+              path="/admin/courses/create"
+              element={<Navigate to="/admin/auth" />}
+            />
+          )}
+          {isAuthenticated() ? (
+            <Route
+              path="/admin/courses/:courseId"
+              element={<CourseCRUDForm />}
+            />
+          ) : (
+            <Route
+              path="/admin/courses/:courseId"
+              element={<Navigate to="/admin/auth" />}
+            />
+          )}
         </Routes>
       </div>
       <Footer />
