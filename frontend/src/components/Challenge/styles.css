@@ -50,3 +50,7 @@
   .challenge-table tbody td span {
     color: var(--language-color);
   }
+
+  .pagination-container {
+    margin-top: 10px;
+  }

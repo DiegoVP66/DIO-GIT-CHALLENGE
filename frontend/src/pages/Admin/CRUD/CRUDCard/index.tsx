@@ -39,7 +39,7 @@ const CourseCRUDCard = ({ course, onDelete }: Props) => {
       <h1>Course: {course.courseName}</h1>
       <h3>Instructor: {course.instructorName}</h3>
       <p>Hours: {course.hours}</p>
-      <p>%: {course.percent}</p>
+      <p>Percentage: {course.percent}</p>
       <div className="btn-course-crud-container">
         <div className="course-delete-button">
           <button

@@ -6,7 +6,6 @@
     font-size: 20px;
     display: flex;
     flex-direction: column;
-
 }
 
 .course-crud-card-container h1{
@@ -20,8 +19,7 @@
 }
 
 .course-crud-card-container p{
-    font-size: 0.6em;
- 
+    font-size: 0.7em;
 }
 
 

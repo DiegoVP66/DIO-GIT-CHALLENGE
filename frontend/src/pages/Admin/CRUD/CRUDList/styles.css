@@ -7,7 +7,7 @@
         max-width: 600px;
         margin: 20px;
         display: flex;
-        flex-direction: column;  
+        flex-direction: column; 
     }
     
     .course-title-crud{
@@ -22,7 +22,7 @@
     @media(min-width: 992px){
         .list-course-crud-flex{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
         }
         .list-course-crud-img{
             display: flex;
