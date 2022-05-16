@@ -46,18 +46,16 @@ const Login = () => {
     <div className="base-card login-card">
       <h1>LOGIN</h1>
       {hasError && (
-        <div className="alert alert-danger">
-          Error ao tentar efetuar o login
-        </div>
+        <div className="alert alert-danger">Error while trying to log in</div>
       )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
           <input
             {...register("username", {
-              required: "Campo obrigatório",
+              required: "Required field",
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Email inválido",
+                message: "Invalid e-mail",
               },
             })}
             type="text"
@@ -74,7 +72,7 @@ const Login = () => {
         <div className="mb-2">
           <input
             {...register("password", {
-              required: "Campo obrigatório",
+              required: "Required field",
             })}
             type="password"
             className={`form-control base-input ${
@@ -89,7 +87,7 @@ const Login = () => {
           </div>
         </div>
         <div className="login-submit">
-          <button className="btn btn-primary text-white">Fazer Login</button>
+          <button className="btn btn-primary text-white">Login</button>
         </div>
       </form>
     </div>

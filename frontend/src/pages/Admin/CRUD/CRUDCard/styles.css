@@ -1,0 +1,41 @@
+.course-crud-card-container{
+    background-color: var(--dark-color);
+    margin-top: 10px;
+    max-width: 600px;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.course-crud-card-container h1{
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.course-crud-card-container h3{
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.course-crud-card-container p{
+    font-size: 0.6em;
+ 
+}
+
+
+.btn-course-crud-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-delete-button{
+    margin-right: 15px;
+}
+
+.btn-course-edit{
+    background-color: var(--rigth-effect-color);
+    color: var(--left-effect-color);
+}

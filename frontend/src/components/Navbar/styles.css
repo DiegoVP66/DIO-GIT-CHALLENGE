@@ -23,17 +23,16 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
   }
+  .btn-login-container, .crud-panel {
+      margin-left: 10px;
+  }
 
   .btn-login-container a{
-      color: var(--secondary-color);
+      color: var(--left-effect-color);
   }
 
   .logout-container a {
       color: var(--rigth-effect-color);
-  }
-
-  .crud-panel{
-      margin-left: 5px;
   }
 
   .crud-panel a {
@@ -51,6 +50,6 @@
     }
 
     .main-menu {
-     width: 100px;
+     width: 120px;
     }
 }

@@ -1,0 +1,37 @@
+.list-course-crud-img{
+    display: none;
+    }
+    .list-course-crud-container{
+        background-color: var(--dark-color);
+        padding: 10px;
+        max-width: 600px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;  
+    }
+    
+    .course-title-crud{
+        text-align: center;
+    }
+    @media(min-width:768px){
+        .list-course-crud-containers{
+            margin-right: 30px;
+        }
+    }
+
+    @media(min-width: 992px){
+        .list-course-crud-flex{
+            display: flex;
+            justify-content: space-between;
+        }
+        .list-course-crud-img{
+            display: flex;
+            margin-top: 20px;
+            margin-right: 130px;
+            width: 100%;
+            max-width: 400px;
+            }
+        .list-course-crud-img img{
+            width: 100%;
+        }
+    }

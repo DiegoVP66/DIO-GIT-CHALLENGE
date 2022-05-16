@@ -63,6 +63,9 @@ const Navbar = () => {
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
+            <li>
+              <a href="#progress">Progress</a>
+            </li>
           </ul>
           <div className="btn-login-container">
             {authContextData.authenticated ? (
@@ -78,7 +81,7 @@ const Navbar = () => {
           <div className="crud-panel">
             {authContextData.authenticated ? (
               <>
-                <NavLink to="/admin/users">ADM</NavLink>
+                <NavLink to="/admin/courses">ADM</NavLink>
               </>
             ) : (
               <></>
