@@ -28,7 +28,7 @@ const CourseCRUDCard = ({ course, onDelete }: Props) => {
     makeBackendRequest(config)
       .then(() => {
         onDelete();
-        history("/admin/courses");
+        history("/admin/courses/create");
       })
       .catch((error) => {
         console.log("Erro ao deletar " + error);

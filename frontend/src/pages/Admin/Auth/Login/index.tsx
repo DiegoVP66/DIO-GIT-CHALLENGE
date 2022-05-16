@@ -34,7 +34,7 @@ const Login = () => {
           authenticated: true,
           tokenData: getTokenData(),
         });
-        history("/");
+        history("/admin/courses");
       })
       .catch((error) => {
         setHasError(true);
