@@ -28,13 +28,6 @@
 - Postgres
 - h2-console
 
-### Deploy
-Heroku 
-https://dio-git-challenge.herokuapp.com/
-
-Netlify
-https://dio-git-challenge.netlify.app/
-
 
 
 ### Algumas Imagens do APP
